@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsActivity">
+
+    <EditText
+        android:id="@+id/GlobalTotalRecoverededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:textColor="#000000"
+        android:background="#ADFF2F"
+        android:hint="New"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalTotalRecoveredTextView" />
+
+    <EditText
+        android:id="@+id/GlobalNewDeathseditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="8dp"
+        android:textColor="#000000"
+        android:background="#FF0000"
+        android:enabled="false"
+        android:hint="New"
+        app:layout_constraintEnd_toStartOf="@+id/GlobalTotalDeathseditText"
+        app:layout_constraintStart_toEndOf="@+id/GlobalTotalRecoverededitText"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalNewDeathsTextView" />
+
+    <EditText
+        android:id="@+id/GlobalTotalDeathseditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal"
+        android:enabled="false"
+        android:textColor="#000000"
+        android:background="#FF0000"
+        android:hint="New"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalTotalDeathsTextView" />
+
+    <TextView
+        android:id="@+id/Global"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/global"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/GlobalNewConfirmedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/new_confirmed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Global" />
+
+    <EditText
+        android:id="@+id/GlobalNewConfirmededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:textColor="#000000"
+        android:background="#FFFF00"
+        android:hint="New"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalNewConfirmedTextView" />
+
+    <EditText
+        android:id="@+id/GlobalTotalConfirmededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="#000000"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:hint="New"
+        app:layout_constraintEnd_toStartOf="@+id/GlobalNewRecoverededitText"
+        app:layout_constraintStart_toEndOf="@+id/GlobalNewConfirmededitText"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalTotalConfirmedTextView" />
+
+    <EditText
+        android:id="@+id/GlobalNewRecoverededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:enabled="false"
+        android:textColor="#000000"
+        android:background="#ADFF2F"
+        android:hint="New"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalNewRecoveredTextView" />
+
+    <TextView
+        android:id="@+id/GlobalTotalConfirmedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/total_confirmed"
+        app:layout_constraintEnd_toStartOf="@+id/GlobalNewRecoveredTextView"
+        app:layout_constraintStart_toEndOf="@+id/GlobalNewConfirmedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/Global" />
+
+    <TextView
+        android:id="@+id/GlobalNewRecoveredTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="16dp"
+        android:text="@string/new_recovered"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Global" />
+
+    <TextView
+        android:id="@+id/GlobalTotalDeathsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="16dp"
+        android:text="Total Deaths"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalNewRecoverededitText" />
+
+    <TextView
+        android:id="@+id/GlobalNewDeathsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="New Deaths"
+        app:layout_constraintEnd_toStartOf="@+id/GlobalTotalDeathsTextView"
+        app:layout_constraintStart_toEndOf="@+id/GlobalTotalRecoveredTextView"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalTotalConfirmededitText" />
+
+    <TextView
+        android:id="@+id/GlobalTotalRecoveredTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Total Recovered"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalNewConfirmededitText" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:completionThreshold="1"
+        android:hint="@string/country"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GlobalNewDeathseditText" />
+
+    <TextView
+        android:id="@+id/CountryNewConfirmedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/new_confirmed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Country" />
+
+    <TextView
+        android:id="@+id/CountryTotalConfirmedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/total_confirmed"
+        app:layout_constraintEnd_toStartOf="@+id/CountryNewRecoveredTextView"
+        app:layout_constraintStart_toEndOf="@+id/CountryNewConfirmedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/Country" />
+
+    <TextView
+        android:id="@+id/CountryNewRecoveredTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/new_recovered"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Country" />
+
+    <EditText
+        android:id="@+id/CountryNewConfirmededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"
+        android:background="#FFFF00"
+        android:hint="New"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CountryNewConfirmedTextView" />
+
+    <EditText
+        android:id="@+id/CountryTotalConfirmededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="16dp"
+        android:textColor="#000000"
+        android:background="#FFFF00"
+        android:enabled="false"
+        android:hint="New"
+        app:layout_constraintEnd_toStartOf="@+id/CountryNewRecoverededitText"
+        app:layout_constraintStart_toEndOf="@+id/CountryNewConfirmededitText"
+        app:layout_constraintTop_toBottomOf="@+id/CountryTotalConfirmedTextView" />
+
+    <EditText
+        android:id="@+id/CountryNewRecoverededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center_horizontal"
+        android:enabled="false"
+        android:textColor="#000000"
+        android:background="#ADFF2F"
+        android:hint="New"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CountryNewRecoveredTextView" />
+
+    <TextView
+        android:id="@+id/CountryTotalRecoveredTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/total_recovered"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CountryNewConfirmededitText" />
+
+    <TextView
+        android:id="@+id/CountryNewDeathsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/new_deaths"
+        app:layout_constraintEnd_toStartOf="@+id/CountryTotalDeathsTextView"
+        app:layout_constraintStart_toEndOf="@+id/CountryTotalRecoveredTextView"
+        app:layout_constraintTop_toBottomOf="@+id/CountryTotalConfirmededitText" />
+
+    <TextView
+        android:id="@+id/CountryTotalDeathsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="16dp"
+        android:text="@string/total_deaths"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CountryNewRecoverededitText" />
+
+    <EditText
+        android:id="@+id/CountryTotalRecoverededitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:background="#ADFF2F"
+        android:enabled="false"
+        android:hint="New"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CountryTotalRecoveredTextView" />
+
+    <EditText
+        android:id="@+id/CountryNewDeathseditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:enabled="false"
+        android:textColor="#000000"
+        android:background="#FF0000"
+        android:hint="New"
+        app:layout_constraintEnd_toStartOf="@+id/CountryTotalDeathseditText"
+        app:layout_constraintStart_toEndOf="@+id/CountryTotalRecoverededitText"
+        app:layout_constraintTop_toBottomOf="@+id/CountryNewDeathsTextView" />
+
+    <EditText
+        android:id="@+id/CountryTotalDeathseditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:textColor="#000000"
+        android:background="#FF0000"
+        android:gravity="center_horizontal"
+        android:enabled="false"
+        android:hint="New"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CountryTotalDeathsTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

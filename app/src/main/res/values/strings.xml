@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Corona Tracker</string>
+    <string name="country">Country</string>
+    <string name="enter_your_number">Enter Your Number</string>
+    <string name="validate">Validate</string>
+    <string name="please_enter_your_Info_below">Please Enter Your Info Below</string>
+    <string name="logout">Logout</string>
+    <string name="signin">SignIn</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="waiting_for_the_code_to_be_verified">Waiting for the Code to be Verified</string>
+    <string name="if_it_doesn_t_automatically_verify_the_code_please_enter_it_below">If it doesn\'t automatically verify the code, please enter it below</string>
+    <string name="enter_your_name">Enter Your Full Name</string>
+    <string name="Corona_Alert">Corona Alert!!!!!</string>
+    <string name="Corona_Alert_Text">Please Stay At Home one of your contacts might have corona</string>
+    <string name="Toast_Something_Didnt_Work">Something Didn\'t Work</string>
+    <string name="credits" translatable="false">Icons made by Freepik "\n" Retrieved from  www.flaticon.com "\n" "\n" The MIT License (MIT)
+Copyright © 2015 Corona Tracker
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE. "\n" "\n"
+    Statistics Information "\n" Retrieved from https://api.covid19api.com/summary</string>
+    <string name="import_from_contacts_app">Import From Contacts App</string>
+    <string name="enter_their_name">Enter Their Name</string>
+    <string name="enter_their_number">Enter Their Number</string>
+    <string name="add_date_last_seen">Add Date Last Seen</string>
+    <string name="dd_mm_yyyy" translatable="false">DD-MM-YYYY</string>
+    <string name="please_add_your_contacts_below">Please Add Your Contacts Below</string>
+    <string name="gender">Gender</string>
+    <string name="add">Add</string>
+    <string name="do_they_have_corona">Do they have corona?</string>
+    <string name="total_recovered">Total Recovered</string>
+    <string name="new_deaths">New Deaths</string>
+    <string name="total_deaths">Total Deaths</string>
+    <string name="global">Global</string>
+    <string name="hello">hello</string>
+    <string name="new_confirmed">New Confirmed</string>
+    <string name="total_confirmed">Total Confirmed</string>
+    <string name="new_recovered">New Recovered</string>
+    <string name="title_location_permission" translatable="false">Location Permission</string>
+    <string name="text_location_permission" translatable="false">Please Accept location permission to track your activity</string>
+    <string name="ok" translatable="false">Ok</string>
+</resources>

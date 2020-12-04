@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Corona Tracker</string>
+    <string name="country">بلد</string>
+    <string name="enter_your_number">أدخل رقمك</string>
+    <string name="validate">ثبت</string>
+    <string name="please_enter_your_Info_below">يرجى إدخال معلوماتك</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="signin">تسجيل الدخول</string>
+    <string name="enter_code">ادخل الرمز</string>
+    <string name="waiting_for_the_code_to_be_verified">في انتظار التحقق من الرمز</string>
+    <string name="if_it_doesn_t_automatically_verify_the_code_please_enter_it_below">إذا لم يتم التحقق من الرمز تلقائيًا ، فيرجى إدخاله أدناه</string>
+    <string name="enter_your_name">أدخل اسمك الكامل</string>
+    <string name="Corona_Alert">تنبيه كورونا !!!!!</string>
+    <string name="Corona_Alert_Text">يرجى البقاء في المنزل قد يكون أحد أصدقائك لديه كورونا</string>
+    <string name="Toast_Something_Didnt_Work">شيء ما لم ينجح</string>
+    <string name="import_from_contacts_app">استيراد من تطبيق جهات الاتصال</string>
+    <string name="enter_their_name">أدخل أسمائهم</string>
+    <string name="enter_their_number">أدخل رقمهم</string>
+    <string name="add_date_last_seen">أضف التاريخ عندما رأيته آخر مرة</string>
+    <string name="please_add_your_contacts_below">يرجى إضافة جهات الاتصال الخاصة بك أدناه</string>
+    <string name="gender">جنس</string>
+    <string name="add">أضف</string>
+    <string name="do_they_have_corona">هل لديهم كورونا؟</string>
+    <string name="total_recovered">إجمالي الشفاء</string>
+    <string name="new_deaths">وفيات جديدة</string>
+    <string name="total_deaths">إجمالي الوفيات</string>
+    <string name="global">عالمي</string>
+    <string name="hello">مرحبا</string>
+    <string name="new_confirmed">مؤكد جديد</string>
+    <string name="total_confirmed">إجمالي الحالات المؤكدة</string>
+    <string name="new_recovered">شفاء جديد</string>
+</resources>
