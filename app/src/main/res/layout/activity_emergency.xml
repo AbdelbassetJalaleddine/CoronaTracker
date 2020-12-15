@@ -98,4 +98,9 @@
         fancy:fb_radius="30dp"
         fancy:fb_text="Open MOPH Website"
         fancy:fb_textColor="#FFFFFF" />
+    <WebView
+        android:layout_width="match_parent"
+        android:id="@+id/webview"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

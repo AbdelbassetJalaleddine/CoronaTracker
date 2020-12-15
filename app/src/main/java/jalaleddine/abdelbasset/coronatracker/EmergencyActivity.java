@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import mehdi.sakout.fancybuttons.FancyButton;
@@ -21,6 +22,7 @@ public class EmergencyActivity extends AppCompatActivity {
 
     FancyButton OpenRedCross;
     FancyButton OpenMOPH;
+    WebView mWebView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,7 @@ public class EmergencyActivity extends AppCompatActivity {
         OpenMOPH = findViewById(R.id.OpenMOPHButton);
         OpenMOPH.setIconResource(R.drawable.website);
         OpenMOPH.setIconPosition(FancyButton.POSITION_BOTTOM);
+        mWebView = findViewById(R.id.webview);
 
     }
 
@@ -97,10 +100,22 @@ public class EmergencyActivity extends AppCompatActivity {
     }
 
     public void OpenRedCross(View view) {
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        mWebView.getSettings().setAllowFileAccess(true);
+        mWebView.getSettings().setAppCacheEnabled(true);
+        mWebView.loadUrl("https://www.redcross.org.lb/");
+        mWebView.setVisibility(View.VISIBLE);
 
     }
 
     public void OpenMOPH(View view) {
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        mWebView.getSettings().setAllowFileAccess(true);
+        mWebView.getSettings().setAppCacheEnabled(true);
+        mWebView.loadUrl("https://www.moph.gov.lb/en");
+        mWebView.setVisibility(View.VISIBLE);
 
     }
 }

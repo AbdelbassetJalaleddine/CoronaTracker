@@ -1,6 +1,8 @@
 package jalaleddine.abdelbasset.coronatracker;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -17,9 +19,12 @@ import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
+import dmax.dialog.SpotsDialog;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -33,6 +38,9 @@ public class VerifyPhoneActivity extends AppCompatActivity {
     String Name;
     String phonenumber;
     String gender;
+    boolean signup = false;
+    AlertDialog alertDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +50,18 @@ public class VerifyPhoneActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressbar);
         editText = findViewById(R.id.editTextCode);
+        alertDialog = new SpotsDialog.Builder()
+                .setContext(this)
+                .setMessage("Please Wait...")
+                .setCancelable(false)
+                .build();
 
 
         phonenumber = getIntent().getStringExtra("phonenumber");
         Name = getIntent().getStringExtra("Name");
         gender = getIntent().getStringExtra("Gender");
+        signup = getIntent().getBooleanExtra("Sign Up",false);
+
         sendVerificationCode(phonenumber);
 
         findViewById(R.id.buttonSignIn).setOnClickListener(new View.OnClickListener() {
@@ -77,7 +92,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                        if (task.isSuccessful() && signup) {
 
                             Intent intent = new Intent(VerifyPhoneActivity.this, ProfileActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -90,11 +105,20 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                             FirebaseDatabase.getInstance().getReference().child("Users").child(phonenumber).child("ID").setValue(FirebaseInstanceId.getInstance().getId());
                             FirebaseDatabase.getInstance().getReference().child("Users").child(phonenumber).child("Name").setValue(Name);
                             FirebaseDatabase.getInstance().getReference().child("Users").child(phonenumber).child("Gender").setValue(gender);
-
+                            SharedPreferences.Editor editor = getSharedPreferences("UsersData", MODE_PRIVATE).edit();
+                            editor.putString("number", phonenumber);
+                            editor.apply();
                             startActivity(intent);
 
-                        } else {
-                            Toast.makeText(VerifyPhoneActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        } else if(task.isSuccessful() && !signup){
+                            alertDialog.show();
+                            Intent intent = new Intent(VerifyPhoneActivity.this, ProfileActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            SharedPreferences.Editor editor = getSharedPreferences("UsersData", MODE_PRIVATE).edit();
+                            editor.putString("number", phonenumber);
+                            editor.apply();
+                            startActivity(intent);
+                            alertDialog.hide();
                         }
                     }
                 });
