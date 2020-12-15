@@ -54,4 +54,5 @@ THE SOFTWARE. "\n" "\n"
     <string name="title_location_permission" translatable="false">Location Permission</string>
     <string name="text_location_permission" translatable="false">Please Accept location permission to track your activity</string>
     <string name="ok" translatable="false">Ok</string>
+    <string name="by_ara_leb" translatable="false">By \n ARA LEB</string>
 </resources>

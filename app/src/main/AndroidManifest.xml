@@ -28,8 +28,10 @@
         <activity android:name=".StatisticsActivity" />
         <activity android:name=".ContactAdderActivity" />
         <activity android:name=".ContactsActivity" />
-        <activity android:name=".RegistrationActivity">
-            <intent-filter>
+        <activity android:name=".RegistrationActivity"/>
+        <activity android:name=".SplashActivity">
+
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

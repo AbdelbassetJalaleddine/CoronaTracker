@@ -93,7 +93,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful() && signup) {
-
+                            alertDialog.show();
                             Intent intent = new Intent(VerifyPhoneActivity.this, ProfileActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             FirebaseDatabase.getInstance().getReference().child(FirebaseInstanceId.getInstance().getId());
@@ -107,7 +107,10 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                             FirebaseDatabase.getInstance().getReference().child("Users").child(phonenumber).child("Gender").setValue(gender);
                             SharedPreferences.Editor editor = getSharedPreferences("UsersData", MODE_PRIVATE).edit();
                             editor.putString("number", phonenumber);
+                            editor.putString("name", Name);
+                            editor.putString("gender", gender);
                             editor.apply();
+                            alertDialog.hide();
                             startActivity(intent);
 
                         } else if(task.isSuccessful() && !signup){

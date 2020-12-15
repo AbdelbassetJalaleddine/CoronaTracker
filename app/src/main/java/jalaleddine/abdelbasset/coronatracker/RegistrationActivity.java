@@ -43,8 +43,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     editText.requestFocus();
                     return;
                 }
-                String phoneNumber = code;
-                PhoneHere(phoneNumber,gender);
+                PhoneHere(code,gender);
             }
         });
     }

@@ -13,4 +13,9 @@
             >Yes</item>
 
     </string-array>
+    <array name="rainbow">
+        <item>@color/rainbow_pink</item>
+        <item>@color/rainbow_violet</item>
+        <item>@color/rainbow_blue</item>
+    </array>
 </resources>

@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -81,40 +82,21 @@ public class ProfileActivity extends AppCompatActivity implements ForceUpdateChe
     }
 
     private void GetInfo() {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child(FirebaseInstanceId.getInstance().getId());
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    try{
-                            if(snapshot.getKey().equals("Gender")){
-                                if(snapshot.getValue().equals("Male")){
+        SharedPreferences editor = getSharedPreferences("UsersData", MODE_PRIVATE);
+        String number = editor.getString("number", "1");
+        String name = editor.getString("name", "Aboud");
+        String gender = editor.getString("gender", "male");
+
+                                if(gender.toLowerCase().equals("male")){
                                     iv.setImageResource(R.mipmap.male_avatar);
                                 }
                                 else{
                                     iv.setImageResource(R.mipmap.female_avatar);
                                 }
-                            }
-                            if(snapshot.getKey().equals("Name")){
-                                nameeditText.setText(snapshot.getValue().toString());
-                            }
-                            if(snapshot.getKey().equals("Phone Number")){
-                                phoneeditText.setText(snapshot.getValue().toString());
-                            }
-                        spotsDialog.dismiss();
-                    }catch (Exception e){
-                        Toast.makeText(ProfileActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                        spotsDialog.dismiss();
-                    }
-                }
+                                nameeditText.setText(name);
+                                phoneeditText.setText(number);
+        spotsDialog.dismiss();
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
 
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
