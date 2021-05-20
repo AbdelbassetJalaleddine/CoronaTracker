@@ -58,8 +58,8 @@ public class VerifyPhoneActivity extends AppCompatActivity {
 
 
         phonenumber = getIntent().getStringExtra("phonenumber");
-        Name = getIntent().getStringExtra("Name");
-        gender = getIntent().getStringExtra("Gender");
+        Name = getIntent().getStringExtra("name");
+        gender = getIntent().getStringExtra("gender");
         signup = getIntent().getBooleanExtra("Sign Up",false);
 
         sendVerificationCode(phonenumber);
@@ -106,20 +106,17 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                             FirebaseDatabase.getInstance().getReference().child("Users").child(phonenumber).child("Name").setValue(Name);
                             FirebaseDatabase.getInstance().getReference().child("Users").child(phonenumber).child("Gender").setValue(gender);
                             SharedPreferences.Editor editor = getSharedPreferences("UsersData", MODE_PRIVATE).edit();
-                            editor.putString("number", phonenumber);
+                            editor.putString("phonenumber", phonenumber);
                             editor.putString("name", Name);
                             editor.putString("gender", gender);
                             editor.apply();
                             alertDialog.hide();
                             startActivity(intent);
 
-                        } else if(task.isSuccessful() && !signup){
+                        } else if(task.isSuccessful()){
                             alertDialog.show();
                             Intent intent = new Intent(VerifyPhoneActivity.this, ProfileActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            SharedPreferences.Editor editor = getSharedPreferences("UsersData", MODE_PRIVATE).edit();
-                            editor.putString("number", phonenumber);
-                            editor.apply();
                             startActivity(intent);
                             alertDialog.hide();
                         }

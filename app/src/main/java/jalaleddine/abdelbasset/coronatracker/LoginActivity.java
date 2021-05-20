@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         String number = prefs.getString("number", "1");
         if(!number.equals("1")){
             Intent intent = new Intent(LoginActivity.this, VerifyPhoneActivity.class);
-            intent.putExtra("Phone Number", code);
+            intent.putExtra("phonenumber", code);
             startActivity(intent);
             alertDialog.hide();
         }

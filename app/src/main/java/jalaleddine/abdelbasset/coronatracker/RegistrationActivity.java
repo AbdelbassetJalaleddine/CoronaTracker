@@ -54,7 +54,7 @@ public class RegistrationActivity extends AppCompatActivity {
         if(!number.equals("1")){
             Toast.makeText(RegistrationActivity.this, "User already registered! Logging IN!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(RegistrationActivity.this, VerifyPhoneActivity.class);
-            intent.putExtra("Phone Number", phoneNumber);
+            intent.putExtra("phonenumber", phoneNumber);
             intent.putExtra("Sign Up",false);
             startActivity(intent);
         }
@@ -62,8 +62,8 @@ public class RegistrationActivity extends AppCompatActivity {
             Intent intent = new Intent(RegistrationActivity.this, VerifyPhoneActivity.class);
             intent.putExtra("phonenumber", phoneNumber);
             intent.putExtra("Sign Up",true);
-            intent.putExtra("Name",editTextName.getText().toString().trim());
-            intent.putExtra("Gender",gender);
+            intent.putExtra("name",editTextName.getText().toString().trim());
+            intent.putExtra("gender",gender);
             startActivity(intent);
         }
     }

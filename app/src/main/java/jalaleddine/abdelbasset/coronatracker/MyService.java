@@ -77,7 +77,7 @@ public class MyService extends Service {
                                 .setUseGPS(true)
                                 .setUseNetwork(true)
                                 .setUsePassive(true)
-                                .setTimeBetweenUpdates(5 * 1000);
+                                .setTimeBetweenUpdates(1000);
                                 //.setMetersBetweenUpdates(3);
                 LocationTracker tracker = new LocationTracker(this, settings) {
 
@@ -85,8 +85,9 @@ public class MyService extends Service {
                     public void onLocationFound(Location location) {
                         longy = location.getLongitude();
                         laty = location.getLatitude();
-                        UpdateLocation(laty,longy);
-                        FindNumbers();
+                        System.out.println("long " + longy + " lat " + laty);
+                        //UpdateLocation(laty,longy);
+                        //FindNumbers();
                     }
                     @Override
                     public void onTimeout() {
